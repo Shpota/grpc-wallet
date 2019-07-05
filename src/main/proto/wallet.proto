@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option java_package = "com.sashashpota.wallet.controllers";
+option java_multiple_files = true;
+
+service Wallet {
+    rpc Balance (BalanceRequest) returns (BalanceReply) {}
+    rpc Deposit (ChangeBalanceRequest) returns (Empty) {}
+    rpc withdraw (ChangeBalanceRequest) returns (Empty) {}
+}
+
+message BalanceRequest {
+    string userId = 1;
+}
+
+message BalanceReply {
+    repeated Balance balance = 1;
+}
+
+message Balance {
+    string currency = 1;
+    sint32 amount = 2;
+}
+
+message ChangeBalanceRequest {
+    string userId = 1;
+    string currency = 2;
+    sint32 amount = 3;
+}
+
+message Empty {
+}
