@@ -7,20 +7,21 @@ buildscript {
     }
 }
 
-
 plugins {
     id 'org.springframework.boot' version '2.1.6.RELEASE'
     id "com.google.protobuf" version "0.8.9"
     id 'java'
 }
+
 repositories {
     mavenCentral()
 }
+
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'com.google.protobuf'
 
 group = 'com.sashashpota'
-version = '0.0.1-SNAPSHOT'
+version = '1.0'
 sourceCompatibility = '11'
 
 dependencies {
