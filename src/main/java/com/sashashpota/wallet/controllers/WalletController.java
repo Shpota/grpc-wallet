@@ -1,6 +1,5 @@
 package com.sashashpota.wallet.controllers;
 
-
 import com.sashashpota.wallet.services.WalletException;
 import com.sashashpota.wallet.services.WalletService;
 import io.grpc.StatusRuntimeException;
