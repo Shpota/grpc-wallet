@@ -6,5 +6,4 @@ RUN ./gradlew build
 
 FROM openjdk:11.0.3-jre
 COPY --from=BUILD_IMAGE /build/libs/wallet*.jar wallet.jar
-EXPOSE 8080
 CMD ["java","-jar","-Dspring.profiles.active=prod","wallet.jar"]
